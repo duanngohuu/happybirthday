@@ -11,8 +11,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!-- My Style -->
-  <link rel="stylesheet" href="./style/main.css" />
+  <link id="main-style" rel="stylesheet" href="./style/main.css" />
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif !important;
+    }
+</style>
 </head>
 
 <body>
@@ -25,6 +31,12 @@
 
     <audio class="song2" loop>
         <source src="./music/ChucMungSinhNhat.mp3">
+        </source>
+        Em yêu mở bằng máy tính thử xem em ơi. Có nhạc có nhạc em ạ, hihi.
+    </audio>
+
+    <audio class="song3" loop>
+        <source src="./music/hbd1.mp3">
         </source>
         Em yêu mở bằng máy tính thử xem em ơi. Có nhạc có nhạc em ạ, hihi.
     </audio>
@@ -67,17 +79,12 @@
             <p class="idea-3">
                 Chúc em yêu đạt được những gì mà em mong muốn<br>
                 <strong>đặc biệt là anh</strong>
-                .
             </p>
             <p class="idea-4">anh mong rằng</p>
             <p class="idea-5">
                 chúng mình luôn cùng nhau cố gắng, cùng nhau vượt qua mọi thử thách mà cả hai đã đặt ra nha em.
                 <br />
-                <span>
-                    <span style="color: green;">&#x1F340;</span> <!-- Four-leaf clover -->
-                    <span style="color: green;">&#x1F340;</span> <!-- Four-leaf clover -->
-                    <span style="color: green;">&#x1F340;</span> <!-- Four-leaf clover -->
-                    <span style="color: green;">&#x1F340;</span> <!-- Four-leaf clover -->
+                <span style="margin-top: 5px;">
                     <span style="color: green;">&#x1F340;</span> <!-- Four-leaf clover -->
                 </span>
             </p>
@@ -91,7 +98,7 @@
             <img src="./img/show/anhnen.JPG" alt="profile" class="profile-picture" id="imagePath"/>
             <img src="img/hat.svg" alt="hat" class="hat" />
             <div class="wish">
-                <h3 class="wish-hbd">Happy_birthday_My_Love</h3>
+                <h3 class="wish-hbd">Happy_birthday_My_Only_One</h3>
                 <h5 id="wishText">Chúc em yêu sinh nhật vui vẻ hí</h5>
             </div>
         </div>
@@ -159,9 +166,6 @@
             <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="20" cy="20" r="20" />
             </svg>
-            <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="20" cy="20" r="20" />
-            </svg>
         </div>
 
         <div class="nine">
@@ -172,14 +176,21 @@
     </div>
 
     <div class="banhkem">
-
+        <iframe src="./cake-part/index.html" class="cake-iframe" frameborder="0"></iframe>
     </div>
 
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <!-- Sweetalert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="application/javascript" src="./script/main.js"></script>
+    <script id="main-script" type="application/javascript" src="./script/main.js"></script>
+    <script>
+        // Prevent caching by appending a timestamp to CSS and JS files
+        const timestamp = new Date().getTime();
+        document.getElementById('main-style').href += `?v=${timestamp}`;
+        document.getElementById('main-script').src += `?v=${timestamp}`;
+    </script>
 
 </html>
