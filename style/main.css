@@ -29,7 +29,7 @@ body {
 }
 
 .one {
-  font-size: 4.5rem;
+  font-size: 1.9rem;
 }
 
 .two {
@@ -38,7 +38,7 @@ body {
 }
 
 .three {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 
 .four .text-box {
@@ -83,17 +83,16 @@ body {
 }
 
 .five .idea-5 {
-  font-size: 4rem;
+  font-size: 1.6rem;
 }
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
-  font-size: 15rem;
+.idea-6 span {
+  font-size: 1.2rem;
 }
-
 
 .six {
   position: relative;
@@ -103,7 +102,7 @@ body {
 
 .six img {
   display: inline-block;
-  height: 350px;
+  height: 100%;
   max-width: 100%;
   /* height: auto; */
 }
@@ -204,7 +203,7 @@ body {
 }
 
 .wish-hbd {
-  font-size: 3em;
+  font-size: 1.2rem;
   margin: 0;
   text-transform: uppercase;
 }
@@ -269,12 +268,14 @@ body {
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 2rem;
   }
 
   .six .hat {
-    /* top: -20px; */
+    top: -160px;
     width: 50px;
+    left: 43vw;
+    rotate: 13deg !important;
   }
 
   .wish-hbd {
